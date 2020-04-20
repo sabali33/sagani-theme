@@ -1,0 +1,51 @@
+.widget__instagram{
+	
+	.account-info{
+		display: table;
+		margin-bottom: 2rem;
+	}
+	.initials {
+		display: table-cell;
+		width: 6.25rem;
+		height: 6.25rem;
+		border-radius: 50%;
+		border: solid thin darken($border-bottom-color, 10);
+		position: relative;
+
+		.text{
+			font-size: 300%;
+			text-transform: uppercase;
+			@include abscenter;
+		}
+
+
+	}
+	.images{
+		font-size: 2px;
+	}
+	.meta{
+		color: darken($border-bottom-color, 20);
+		display: table-cell;
+		padding-left: 1.25rem;
+		vertical-align: middle;
+
+		.account-name{
+			font-size: 160%;
+			text-transform: uppercase;
+			padding-bottom: .3rem;
+
+			a{
+				color: darken($border-bottom-color, 30);
+			}
+		}
+		
+	}
+
+	li.image-item {
+	    display: inline-block;
+	    width: 100px;
+	    vertical-align: top;
+	    padding: 0.2rem;
+	}
+
+}

@@ -1,0 +1,30 @@
+.listing-gallery{
+
+	.post-images{
+		font-size: 0;
+		width: 100%;
+	}
+	.post-gallery{
+
+		.small {
+			width: 50%;
+			display: inline-block;
+			margin-bottom: 3px;
+
+			&.right {
+				padding-left: 3px;
+			}
+
+			img{
+				max-height: 200px;
+				object-fit: cover;
+			}
+		}
+	}
+	.post-meta{
+		padding-top: 2rem;
+	}
+	img {
+		max-height: 400px;
+	}
+}

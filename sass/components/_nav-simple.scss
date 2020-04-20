@@ -1,0 +1,53 @@
+.simple{
+
+	
+	.title{
+		margin-right: 2rem;
+	}
+	.navigation__action{
+		display: inline-block;
+		float: right;
+		//margin-left: 2rem;
+		margin-top: 1.2rem;
+	}
+	.navigation__list{
+
+		position: relative;
+		
+		.more{
+			margin-right: 0;
+		}
+	}
+	.rest{
+		display: block;
+		position: absolute;
+		right: -4rem;
+		padding-top: 0.625rem;
+		z-index: 20;
+		
+		//background: lavender;
+	}
+	/*
+	substitudes
+	 */
+	&__align-center{
+		text-align: center;
+	}
+	&__align-right{
+		text-align: right;
+	}
+	.menu-background{
+		width: 12.5rem;
+		position: absolute;
+		right: 0;
+		background: $color-white;
+		height: 10rem;
+		z-index: 1;
+		padding: 1rem;
+		top: 5rem;
+		
+		.navigation__item{
+			margin-bottom: 1rem;
+		}
+	}
+}

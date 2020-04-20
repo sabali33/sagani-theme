@@ -1,0 +1,59 @@
+.header{
+	background: #fff;
+	
+	&__top-bar{
+		border-bottom: solid thin $border-bottom-color;
+		padding: 2rem;
+		
+		&-left,
+		&-right{
+			display: inline-block;
+		}
+		&-left,{
+			width: 70%;
+
+			
+		}
+		
+		&-right{
+			width: 29%;
+		}
+		&-right li{
+			
+		}
+
+		& ul{
+			list-style: none;
+
+			li{
+				display: inline-block;
+
+				&:not(:last-child){
+					margin-right: 0.3125rem;
+				}
+			}
+
+		}
+	}
+	&__middle{
+		padding: 1rem 0;
+		line-height: 2;
+		.header-right{
+			display: inline-block;
+			width: 67%;
+			vertical-align: middle;
+
+			img{
+				width: 100%;
+				max-height: 90px;
+			}
+		}
+		.title{
+			width: 32%;
+		}
+		
+
+	}
+
+
+}

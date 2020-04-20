@@ -1,0 +1,38 @@
+.main-featured{
+
+	.grid-l-2s{
+		
+		.slide.large {
+			width: 60%;
+			vertical-align: top;
+			.post-title{
+				font-size: 1.875rem;
+			}
+		}
+
+		.slide.small {
+			width: 40%;
+		}
+
+		img{
+			vertical-align: bottom;
+		}
+
+		.top {
+		    margin-bottom: 0.0625rem;
+		    position: relative;
+		}
+		.overlay{
+			text-align: center;
+			padding-bottom: 2rem;
+		}
+		.slider-nav.big{
+			opacity: 0;
+			transition: opacity .5s;
+		}
+		&:hover > .slider-nav.big{
+			opacity: 1;
+
+		}
+	}
+}

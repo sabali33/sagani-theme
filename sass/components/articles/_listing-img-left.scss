@@ -1,0 +1,74 @@
+.listing-classic-left{
+	width: 100%;
+	position: relative;
+	.post-thumb {
+		width: 40%;
+		display: inline-block;
+		@include respond(tab-port){
+			width: 100%;
+		}
+	}
+	.post-excerpt.right{
+		width: 58.2%;
+		display: inline-block;
+		margin: 0;
+		vertical-align: top;
+		padding: 0;
+
+		& > *:not(.share-counter){
+			padding: 0 1.925rem;
+		}
+		@include respond(tab-port){
+			width: 100%;
+		}
+
+	}
+	& .post-meta{
+		padding: 0;
+
+		.post-cat {
+			display: block;
+			width: 35%;
+			text-align: center;
+
+			@include respond(tab-port){
+				width: auto;
+				display: inline-block;
+				margin-right: 0.5rem;
+			}
+		}
+
+		.post-date {
+			margin-left: 0;
+			margin-top: 1rem;
+		}
+
+		.posted-by {
+			margin-top: 1rem;
+		}
+
+		& > *{
+			display: inline-block;
+		}
+
+	}
+	.post-title{
+
+	}
+	.share-counter{
+		position: absolute;
+    	left: 40%;
+    	bottom: 0;
+    	width: 60%;
+    	@include respond(tab-land){
+			width: 100%;
+			position: relative;
+			left: 0;
+		}
+		
+	}
+	img{
+		vertical-align: middle;
+	}
+	
+}

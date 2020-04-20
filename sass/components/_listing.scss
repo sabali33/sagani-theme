@@ -1,0 +1,82 @@
+.listing{
+	background: $color-white;
+	@include component-shadow;//box-shadow: 0 .1rem .4rem .09rem rgba($color-black, .15);
+	color: $primary-body-color;
+	
+	&:not(:last-child){
+		margin-bottom: 2rem;
+	}
+
+	img{
+		width: 100%;
+	}
+	.post-link{
+		display: block;
+		margin-bottom: 1.3rem;
+	}
+	.post-title{
+		margin-top: 1.3rem;
+	}
+	.post-meta, .post-excerpt, .share-counter{
+		padding: 0 1.625rem;
+		margin-bottom: 1.3rem;
+
+		& > span:not(:first-child), & > time{
+			margin-left: 2rem;
+
+			@include respond(phone){
+				margin-left: .7rem;
+			}
+		}
+	}
+	.post-excerpt{
+		@include respond(tab-land){
+			margin-bottom: 0;
+		}
+	}
+	.post-cat {
+	    text-transform: uppercase;
+	    font-size: 12px;
+	    border: solid thin #6f6969;
+	    border-radius: 20px;
+	    padding: 4px 10px;
+	}
+	p{
+		line-height: 1.8;
+
+		@include respond(phone){
+			text-align: justify;
+		}
+	}
+	.share-counter{
+		display: inline-block;
+		width: 100%;
+		border-top: solid thin #eee;
+		padding-top: 20px;
+		font-size: 0.75rem;
+		color: #7f7171;
+
+		span.post-share i {
+    		margin-right: 1rem;
+		}
+
+		span.post-share {
+		    text-transform: uppercase;
+		    float: right;
+		}
+
+		a{
+			color: #7f7171;
+		}
+		i{
+			& {
+				padding-right: 0.3125rem;
+			}
+		}
+	}
+	.margin-top-small{
+		@include respond(tab-port){
+			text-align: center;
+		}
+	}
+}

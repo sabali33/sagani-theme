@@ -1,0 +1,106 @@
+.mega-menu{
+	position: absolute;
+	left: 0;
+	top: 1rem;
+	right: 0;
+	background: $color-white;
+	padding: 2rem;
+	z-index: 99;
+	box-shadow: 0 4px 2px rgba(0,0,0, .15);
+	display: none;
+
+	.sub-cats-box{
+		display: inline-block;
+		text-transform: uppercase;
+		width: 25%;
+		li{
+			padding: .5rem 0;
+			margin-right: 0;
+
+			&:not(:last-child){
+				border-bottom: solid 1px #eee;
+			}
+
+			&::after{
+				content: "\f054";
+				display: inline-block;
+				font-family: fontAwesome;
+				float: right;
+				color: rgba($color-black, .5);
+			}
+
+			&:hover{
+				color: $contrast-color;
+
+				& > a{
+					color: $contrast-color;
+				}
+			}
+		}
+	}
+	.cat-posts-box{
+		display: inline-block;
+		padding-left: 3rem;
+		width: calc(75% - .3125rem);
+		vertical-align: top;
+		position: relative;
+
+		.post-item{
+			display: inline-block;
+			width: calc((100% - 2.96rem) /3);
+			vertical-align: top;
+			&:not(:last-child){
+				margin-right: 1.2rem;
+			}
+
+			h3{
+				margin: 1rem 0;
+				font-weight: 200;
+			}
+		}
+		img{
+			max-width: 100%;
+		}
+
+		&::before{
+			content: " ";
+			display: inline-block;
+			height: 122%;
+			width: 1px;
+			background: #eee;
+			left: 1.5rem;
+			top: -11%;
+			position: absolute;
+		}
+	}
+	ul.sub-cats-list{
+		display: block;
+
+		li{
+			display: block;
+		}
+	}
+	.menu-navigation{
+		margin-top: 1.5rem;
+
+		a{
+			width: 2.125rem;
+			height: 2.125rem;
+			border-radius: 50%;
+			border: solid 2px #eee;
+			padding: .2rem;
+			display: inline-block;
+			line-height: 1.5;
+    		text-align: center;
+
+    		&:hover{
+    			color: $contrast-color;
+    			border-color: $contrast-color;
+    		}
+		}
+		.nav.next{
+			margin-left: 1rem;
+		}
+	}
+	
+}

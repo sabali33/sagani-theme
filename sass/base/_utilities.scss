@@ -1,0 +1,260 @@
+.site-width{
+	width: $site-width;
+	margin: 0 auto;
+	@include respond(tab-port){
+		width: 80%;
+	}
+	@include respond(tab-land){
+		width: 90%;
+	}
+	@include respond(phone){
+		width: 100%;
+	}
+}
+.icon-hidden{
+	position: absolute;
+	top: -1.5rem;
+	right: 2rem;
+	opacity: 0;
+	transition: all .5s;
+}
+
+.margin-top-bottom{
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+.u-center-element{
+	text-align: center;
+}
+.u-margin-top{
+	margin-top: 3.5rem;
+}
+.u-margin-top-bottom-small{
+	margin-top: 1.5rem;
+	margin-bottom: 3.5rem;
+}
+
+.image-box{
+	width: 100%;
+}
+.margin-top-small{
+	margin-top: 1rem;
+}
+.margin-bottom-small{
+	margin-bottom: 1rem;
+}
+.margin-top-smaller{
+	margin-top: 0.5rem;
+}
+.margin-top-medium{
+	margin-top: 2rem;
+}
+
+.slider-nav {
+	width: 2rem;
+	height: 4rem;
+	background: $color-white;
+	position: absolute;
+    background: #eee;
+   	top: 50%;
+   	transform: translateY(-50%);
+    
+
+    &.next{
+    	right: 0;
+    	border-top-left-radius: 4rem;
+    	border-bottom-left-radius: 4rem;
+    	transition: all .3s;
+
+    	&::after{
+    		content: "\f0da";
+			font-family: fontAwesome;
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			right: 30%;
+			transform: translateY(-50%);
+    	}
+    	&:hover{	
+			background: $contrast-color;
+			color: $color-white;
+			cursor: pointer;
+		}
+    }
+    &.prev{
+    	left: 0;
+    	border-top-right-radius: 4rem;
+    	border-bottom-right-radius: 4rem;
+    	transition: all .3s;
+
+    	&::before{
+			content: "\f0d9";
+			font-family: fontAwesome;
+			display: inline-block;
+			position: absolute;
+			left: 30%;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		
+		&:hover{
+			
+			cursor: pointer;
+			background: $contrast-color;
+			color: $color-white;
+
+		}
+    }
+    &.big{
+    	width: 4rem;
+    	height: 8rem;
+    }
+}
+.clearfix{
+	content: "";
+	display: table;
+	clear: both;
+}
+.overlay{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.single .main{
+	margin-top: 2rem;
+}
+.post-cat{
+	@include post-cat;
+}
+.sub-heading, .section-head{
+	text-transform: uppercase;
+}
+.sub-heading{
+	font-weight: 600;
+	color: rgba($color-black, .7);
+}
+.button-submit{
+	@include button-submit;
+}
+.button-submit-small{
+	@include button-submit;
+	width: auto;
+	background: $contrast-color;
+	transition: all .3s;
+
+	&::after{
+		content: "\f178";
+		display: inline-block;
+		font-family: fontAwesome;
+		margin-left: 4rem;
+		float: right;
+	} 
+	&:hover{
+		box-shadow: 0 .2rem 1.9rem rgba(0,0,0,0.2);
+		transform: translateY(-.2rem);
+	}
+	&:focus{
+		outline: none;
+	}
+}
+.tab-controller{
+	display: none;
+}
+.button-add-to-cart{
+	@include button-submit;
+	width: auto;
+	background: $contrast-color;
+	padding: .8rem 2.5rem;
+	transition: all 0.3s;
+
+	&:hover{
+		box-shadow: 0 .3rem .4rem .1rem rgba($color-black, .15);
+		transform: translateY(-.2rem);
+	}
+}
+.active-product-thumb{
+	border: solid 2px $contrast-color;
+	text-align: center;
+}
+.active-highlight-tab{
+	position: relative;
+	//width: 0;
+	transition: all .2s;
+	&::after{
+		content: "";
+		display: inline-block;
+		width: 100%;
+		background: $contrast-color;
+		height: 0.225rem;
+		position: absolute;
+		bottom: -0.1rem;
+		left: 0;
+
+	}
+}
+.rating a::after{
+	content: "\f005  \f005 \f005 \f5c0";
+	font-family: fontAwesome;
+	display: inline-block;
+	color: $rating-color;
+	font-size: .7rem;
+}
+.d-block{
+	display: block;
+}
+.w-100{
+	width: 100% !important;
+}
+.w-25{ width: 25% !important;}
+.icon{
+	width: 50px !important;
+	height: 35px;
+}
+.checkbox + label::before{
+    content: "";
+    width: 22px;
+    border: solid 1px #d2d2d2;
+    height: 22px;
+    display: inline-block;
+	border-radius: 4.5px;  
+	margin-right: 1rem; 
+	vertical-align: middle;
+	transition: all 0.3s;
+}
+.checkbox{
+	display: none;
+}
+.checkbox:checked + label::before{
+	background: $contrast-color;
+	border-width: 2px;
+	border-color: #ffffff;
+	outline: solid 1px #d2d2d2;
+}
+.radio-button{
+	display: none;
+}
+.radio-button + label::before{
+	content: "";
+	display: inline-block;
+	border: solid 1px #d2d2d2;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	transition: all 0.3s;
+	vertical-align: middle;
+	margin-right: 1rem;
+}
+.radio-button:checked + label::before{
+	border-width: 5px;
+	border-color: $contrast-color;
+	background: #d2d2d2;
+}
+.no-thumbail {
+	padding-top: 2rem;
+}
+/* .main-content{
+	@include component-shadow;
+	background: $color-white;
+	padding: 2rem 0;
+} */
+/////////////

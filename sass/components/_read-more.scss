@@ -1,0 +1,32 @@
+.read-more {
+    padding: .8rem 1.2rem;
+    background: $color-white;
+    border-radius: 2.5rem;
+    border: 2px solid darken($primary-body-color, 10);
+	text-transform: uppercase;
+	transition: all .3s;
+	display: inline-block;
+
+	&:hover{
+		background: $contrast-color;
+		color: $color-white;
+		transform: translateY(-0.125rem);
+	}
+	&:active{
+		transform: translateY(-.6rem);
+	}
+
+
+
+    &__about{
+		
+
+    }
+    &::after{
+		content: "\f178";
+		font-family: fontAwesome;
+		display: inline-block;
+		margin-left: 1rem;
+	}
+}
+

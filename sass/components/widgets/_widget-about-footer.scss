@@ -1,0 +1,37 @@
+.footer{
+	
+
+	.widget__about{
+
+		.about-text {
+		    text-align: left;
+		    padding: 0;
+		}
+
+		.widget-title{
+			color: darken($color-white, 10);
+			text-align: left;
+			font-size: 1.5rem;
+		}
+		.social-icons{
+			margin-top: 1rem;
+		}
+		.social-item{
+			display: inline-block;
+			font-size: 0.625rem;
+			width: 1.625rem;
+			height: 1.625rem;
+			border-radius: 50%;
+			border: solid thin $color-white;
+			text-align: center;
+			position: relative;
+
+			a:link,
+			a:visited{
+				@include abscenter;
+				width: 100%;
+			}
+		}
+	}
+
+}

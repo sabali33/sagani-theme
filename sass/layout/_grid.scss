@@ -1,0 +1,74 @@
+.row {
+	max-width: 100%;
+	
+	@include clearfix;
+	
+	&:not(:last-child){
+		margin-bottom: $grid-horizontal;
+	}
+
+	[class^=col-sg]{
+		float: left;
+
+		&:not(:last-child){
+			margin-right: $grid-vertical;
+
+			@include respond(tab-land){
+				margin-right: calc( #{$grid-vertical} - 1rem );
+			}
+		}
+		@include respond(tab-port){
+			width: 100% !important;
+			margin-right: 0 !important;
+		}
+
+	}  
+	.col-sg-1-of-2{
+		width: calc( (100% - #{$grid-vertical}) / 2);
+		@include respond(tab-land){
+			width: calc( (100% - calc(#{$grid-vertical} - 1rem)) / 2);
+		}
+	}
+	.col-sg-1-of-3{
+		width: calc( (100% - (2 * #{$grid-vertical})) / 3);
+
+		@include respond(tab-land){
+			width: calc( (100% - (2 * calc(#{$grid-vertical} - 1rem ))) / 3);
+		}
+	}
+	.col-sg-2-of-3{
+		width: calc( 2 * ((100% - #{$grid-vertical}) / 3));
+		
+		@include respond(tab-land){
+			width: calc( 2 * ((100% - calc(#{$grid-vertical} - 1rem )) / 3));
+		}
+	}
+	.col-sg-1-of-4{
+		width: calc( (100% - (3 * #{$grid-vertical})) / 4);
+
+		@include respond(tab-land){
+			width: calc( (100% - (3 * calc(#{$grid-vertical} - 1rem))) / 4);
+		}
+	}
+	.col-sg-2-of-4{
+		width: calc( 2 * ((100% - (3 * #{$grid-vertical})) / 4) + #{$grid-vertical});
+
+		@include respond(tab-land){
+			width: calc( 2 * ((100% - (3 * calc(#{$grid-vertical} - 1rem ))) / 4) + calc(#{$grid-vertical} - 1rem ));
+		}
+	}
+	.col-sg-3-of-4{
+		width: calc( 3 * ((100% - (3 * #{$grid-vertical})) / 4) + (2 * #{$grid-vertical}));
+
+		@include respond(tab-land){
+			width: calc( 3 * ((100% - (3 * calc(#{$grid-vertical} - 1rem))) / 4) + (2 * calc(#{$grid-vertical} - 1rem )));
+		}
+	}
+
+
+}
+.full-width {
+	.col-sg-2-of-3{
+		width: 100%;
+	}
+}

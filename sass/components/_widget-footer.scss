@@ -1,0 +1,44 @@
+.footer{
+
+	.widget{
+		background-image: none;
+		background: transparent;
+		box-shadow: none;
+		padding: 0;
+		&__subscribe{
+			color: inherit;
+
+		}
+		&__subscribe button{
+			background: $contrast-color;
+		}
+		&-title{
+			color: darken($color-white, 10);
+			text-align: left;
+			margin-bottom: 2rem;
+			font-weight: 100;
+		}
+
+		a{
+			color: lighten(gray, 10);
+		}
+
+		li{
+
+			@include respond(tab-port){
+				margin-bottom: 1rem;
+			}
+		}
+		.post__title{
+			@include respond(tab-land){
+				margin-top: .6rem;
+			}
+		}
+		.post-date{
+			@include respond(tab-land){
+				margin-top: .3rem;
+			}
+		}
+	}
+
+}

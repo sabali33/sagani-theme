@@ -1,0 +1,101 @@
+.title{
+	text-transform: uppercase;
+	display: inline-block;
+	vertical-align: middle;
+
+	a {
+		font-size: 50px;
+		color: #000000;
+	}
+}
+
+.main-heading{
+	position: relative;
+	padding: 0.5rem;
+	box-shadow: 0 .5rem 2rem .09rem rgba($color-black, 0.15);
+	background: $color-white;
+	width: 50%;
+	margin: 0 auto;
+	&::before,
+	&::after{
+		content: "";
+		width: 0.1875rem;
+		height: 1.5625rem;
+		background: $contrast-color;
+		display: inline-block;
+		margin-top: 0.125rem;
+		top: -0.125rem;
+		
+	}
+	&::before{
+		margin-right: 1rem;
+		position: absolute;
+		left: 0;
+		height: 100%;
+	}
+	&::after{
+		margin-left: 1rem;
+		position: absolute;
+		right: 0;
+		height: 100%;
+	}
+	@include respond(tab-port){
+		width: auto;
+	}
+	
+}
+.post-date{
+	font-size: 0.7rem;
+	text-transform: uppercase;
+	margin-top: 1rem;
+
+	&::before{
+		content:"\f017";
+		font-family: fontAwesome;
+		display: inline-block;
+		margin-right: 0.2rem;
+	}
+}
+.footer__lower{
+
+	.logo a{
+		font-size: 3.5rem;
+		text-transform: uppercase;
+
+	}
+	.copyright-text, .back-to-top{
+		padding: 2.5rem 0;
+
+		@include respond(tab-port){
+			padding: 0;
+		}
+	}
+	.back-to-top{
+
+	}
+	a{
+		color: darken($color-white, 10);
+	}
+}
+.posted-by{
+	text-transform: uppercase;
+	font-size: 0.7rem;
+	&::before{
+		content: "\f007";
+		font-family: fontAwesome;
+		display: inline-block;
+		margin-right: 1rem;
+
+		@include respond(phone){
+			margin-right: .5rem;
+		}
+	}
+}
+.post-title{
+	text-transform: capitalize;
+}
+
+
+///
+
+

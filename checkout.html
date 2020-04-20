@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="checkout">
+    <main class="main" role="main">
+        <div class="site-width">
+            <header>
+                <div class="site-width">
+                    <h1 class="main-heading">Checkout</h1>
+                </div>
+            </header>
+            <section class="main-content post-content-box">
+                <div class="notice login-notice-box">RETURNING CUSTOMER? <a href="#">Click here to login</a>  </div>
+                <div class="notice enter-coupon-notice">
+                        HAVE A COUPON? <a href="#">CLICK HERE TO ENTER YOUR CODE</a> 
+                </div>
+                <div class="row">
+                    <div class="col-sg-2-of-3">
+                        <div class="billing-address-box">
+                            <h2 class="billing-details-heading">Billing Details</h2>
+                            <p>
+                                <input type="text" name="first_name" class="input d-inline first-name" placeholder="First Name" id="first-name">
+                                <input type="text" name="first_name" class="input d-inline last-name" placeholder="Last Name">
+                            </p>
+                            <p>
+                                <input type="text" name="email_address" class="input d-inline email-address" placeholder="Email">
+                                <input type="text" name="phone" class="input d-inline  phone" placeholder="Phone">
+                            </p>
+                            <p><input type="text" name="company_name" class="input w-100 company-name" placeholder="Company Name"></p>
+                            <p>
+                                <select name="country" id="country" class="input w-100 d-block country">
+                                    <option value="">Select country *</option>
+                                    <option value="gh">Ghana</option>
+                                </select>
+                            </p>
+                            <p>
+                                    <select name="state" id="state" class="input w-100 d-block state">
+                                            <option value="">Select state *</option>
+                                            <option value="gh">California</option>
+                                    </select>
+                            </p>
+                            <p><input type="text" name="street_name1" class="input w-100 street-name" placeholder="HOUSE NUMBER AND STREET NAME" ></p>
+                            <p><input type="text" name="street_name2" class="input w-100 street-name" placeholder="APARTMENT, SUITE, UNIT ETC. (OPTIONAL)"></p>
+                            <p><input type="text" name="city" class="input w-100 city" placeholder="TOWN / CITY *"></p>
+                            <p>
+                                
+                                <input type="checkbox" name="different_address" class="input checkbox different-address" id="different-address">
+                                <label for="different-address"> SHIP TO A DIFFERENT ADDRESS? 
+                                </label>
+                            </p>
+                            <p>
+                                <label for="additional-notes">ORDER NOTES (OPTIONAL)</label>
+                                
+                                <textarea name="additional-note" id="additional-notes" cols="30" rows="10" class="w-100 additional-notes">
+
+                                </textarea>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="payment-info-box">
+                            <div class="payment-type card-info">
+                                
+                                <input type="radio" name="payment-type" id="payment-type-card" value="card" class="radio-button">
+                                <label for="payment-type-card">Credit Card</label>
+                                
+                                <ul class="payment-icons card-brands">
+                                    <li class="card-brand"><img src="./img/Visa__Inverted__A0_Rectangle_64_pattern.png" alt="" class="icon"></li>
+                                    <li class="card-brand"><img src="./img/Maestro__Inverted__A0_Rectangle_50_pattern.png" alt="" class="icon"></li>
+                                    <li class="card-brand"><img src="./img/Discover_A0_Rectangle_48_pattern.png" alt="" class="icon"></li>
+                                    <li class="card-brand"><img src="./img/American_Express_A0_Rectangle_46_pattern.png" alt="" class="icon"></li>
+                                </ul>
+                                <hr>
+                                <div class="card-form-box">
+                                    <p>
+                                        <input type="text" name="card_number" class="input w-100 card-number" placeholder="Card number" >
+                                        
+                                    </p>
+                                    <p>
+                                        <input type="text" name="card_name" class="input card-name" placeholder="Name on Card">
+                                        <input type="text" name="card_expire_date" class="card-expire-date" placeholder="MM / YY">
+                                        <input type="text" name="card_cvv" class="card-cvv" placeholder="CVV">
+                                    </p>
+                                    <hr>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-type paypal-info">
+                                
+                                <input type="radio" name="payment-type" id="payment-type-paypal" value="paypal" class="radio-button">
+                                <label for="payment-type-paypal">PayPal</label>
+                                <figure class="payment-icons">
+                                    <img src="./img/PayPal_A0_Rectangle_62_pattern.png" alt="PayPal Logo" class="icon">
+                                </figure>
+                                
+                                
+                                <div class="paypal-form-box">
+                                    <input type="email" name="paypal_email_address" id="paypal-email-address" placeholder="Email Address" class="input w-100 paypal-email-address">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="button-submit order">Place order</button>
+                    </div>
+                    <div class="col-sg-1-of-3">
+                            <aside class="order-info-box">
+                                <div class="order-summary-box">
+                                    <div class="order-product-row">
+                                            <div class="th product-name">Product</div>
+                                            <!-- <div class="price th">price</div> -->
+                                            <div class="th amount"> Amount</div>
+                                    </div>
+                                    <div class="order-product-row">
+                                        <div class="td product-name">BELTED DRESS </div>
+                                        <div class="td product-price">1 * $34</div>
+                                        <div class="td amount"> $34</div>
+                                    </div>
+                                    <div class="order-product-row">
+                                        <div class="td product-name">Tunic DRESS </div>
+                                        <div class="td product-price">1 * $40</div>
+                                        <div class="td amount"> $40 </div>
+                                    </div>
+                                    <hr>
+                                    <div class="order-product-row">
+                                        <div class="td sub-total">Subtotal </div>
+                                        <div class="td"></div>
+                                        <div class="td amount"> $74</div>
+                                    </div>
+                                    <div class="order-product-row">
+                                        <div class="td shipping">Shipping: </div>
+                                        
+                                        <div class="td amount">Free Shipping $0</div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="order-summary">
+                                    <span class="label ">Total</span>
+                                    
+                                    <span class="grand-amount td">$74</span>
+                                </div>
+                            </aside>
+                    </div>
+                    
+                </div>
+                
+            </section>
+
+		
+        </div>    
+        
+    </main>
+</body>
+</html>

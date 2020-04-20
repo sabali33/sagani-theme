@@ -1,0 +1,49 @@
+.header-alt{
+	background: #fff;
+	
+	&__top-bar{
+		border-bottom: solid thin $border-bottom-color;
+		padding: 1rem;
+		
+		&-left,
+		&-right{
+			display: inline-block;
+			width: 33.3333%;
+
+		}
+		&-left{
+			
+			
+		}
+		
+		&-right{
+			text-align: right;
+		}
+		&-right li{
+			
+		}
+
+		& ul{
+			list-style: none;
+
+			li{
+				display: inline-block;
+
+				&:not(:last-child){
+					margin-right: 0.3125rem;
+				}
+			}
+
+		}
+	}
+
+	&__middle{
+		padding: 0;
+		line-height: 1;
+		display: inline-block;
+		width: 33.3333%;
+		text-align: center;
+	}
+
+
+}
