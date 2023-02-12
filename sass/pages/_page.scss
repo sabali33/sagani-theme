@@ -1,0 +1,17 @@
+@use '../abstract/mixins' as *;
+@use "../layout/breakpoints" as *;
+@use "../abstract/variables" as *;
+
+.page{
+
+  .page-content-wrap{
+    @include component-shadow;
+    padding: 1rem;
+    color: $primary-body-color;;
+    background: $color-white;
+
+    @include lg{
+      padding: 1.5rem
+    }
+  }
+}
