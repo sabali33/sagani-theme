@@ -1,23 +1,37 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+@use "../layout/breakpoints" as *;
+
 .header-alt{
 	background: #fff;
-	
+	padding: 1rem 0;
+
+	.header-inner{
+		flex-wrap: nowrap;
+		flex: 1 0 auto;
+		align-items: center;
+		justify-content: space-between;
+		display: none;
+
+		@include md{
+			display: flex;
+		}
+	}
+
 	&__top-bar{
 		border-bottom: solid thin $border-bottom-color;
 		padding: 1rem;
-		
-		&-left,
-		&-right{
-			display: inline-block;
-			width: 33.3333%;
 
+
+		&-nav{
+			display: flex;
+			gap: 15px;
 		}
-		&-left{
-			
-			
-		}
-		
 		&-right{
-			text-align: right;
+
+			ul{
+				justify-content: flex-end;
+			}
 		}
 		&-right li{
 			

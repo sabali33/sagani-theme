@@ -1,0 +1,28 @@
+@use "../../abstract/variables" as *;
+@use "../../abstract/mixins" as *;
+
+.product-categories{
+
+	.product-item{
+		border-bottom: solid 1px #eee;
+		.product-link{
+			width: 40%;
+			display: inline-block;
+		}
+
+		.meta{
+			display: inline-block;
+			padding-left: 1rem;
+			vertical-align: top;
+			width: 53%;
+
+			& > *{
+				margin-bottom: .6rem;
+			}
+		}
+		span{
+			display: block;
+		}
+
+	}
+}

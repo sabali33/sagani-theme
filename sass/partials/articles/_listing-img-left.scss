@@ -1,0 +1,62 @@
+@use "../../abstract/variables" as *;
+@use "../../abstract/mixins" as *;
+@use "../../layout/breakpoints" as *;
+
+.listing-classic-left{
+	position: relative;
+
+	.post-excerpt.right{
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+	& .post-meta{
+		padding: 0;
+
+		.post-cat {
+			display: block;
+			width: 35%;
+			text-align: center;
+
+			@include respond(tab-port){
+				width: auto;
+				display: inline-block;
+				margin-right: 0.5rem;
+			}
+		}
+
+		.post-date {
+			margin-left: 0;
+		}
+
+		& > .post-title {
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+		}
+
+	}
+	.post-title{
+
+	}
+	.share-counter{
+		position: absolute;
+    	left: 40%;
+    	bottom: 0;
+		width: 60%;
+		height: auto;
+
+    	@include respond(tab-land){
+			width: 100%;
+			//left: 0;
+		}
+		@include respond(phone){
+			width: 100%;
+			left: 0;
+		}
+		
+	}
+	img{
+		vertical-align: middle;
+	}
+	
+}

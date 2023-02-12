@@ -1,0 +1,116 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
+.pagination{
+
+	&__numbers{
+
+		.page-number{
+			display: inline-block;
+			
+
+			a, .current{
+				padding: 0.3125rem;
+				width: 2.75rem;
+				height: 2.75rem;
+				border-radius: 50%;
+				background: #f3f3f3;
+				border: solid 1.5px #ccc;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: #333;
+
+				&:hover{
+					color: $color-white;
+					border: solid thin $contrast-color;
+					background: $contrast-color;
+					font-weight: normal;
+				}
+				
+			}
+			span.current {
+
+				border: solid 1px $contrast-color;
+			}
+			&.prev a::before{
+				content: "\f0d9";
+				font-family: fontAwesome;
+				display: inline-block;
+			}
+
+			&.next a::after{
+				content: "\f0da";
+				font-family: fontAwesome;
+				display: inline-block;
+			}
+		}
+		
+		.more{
+			border: solid 2px #d6cece;
+    		border-radius: 20px;
+    		padding: .3125rem 0;
+    		padding-left: .625rem;
+    		cursor: pointer;
+
+			.form{
+
+				opacity: 0;
+				transition: all 2s;
+				width: 0;
+
+				& > * {
+					width: 0;
+				}
+
+			}
+			.go-to-page:checked ~ .form{
+				opacity: 1;
+				display: inline-block;
+				width: 100px;
+				& > button{
+					width: 50px
+				}
+				& > button{
+					width: 80px;
+				}
+			}
+			.go-to-page:checked ~ .close{
+				width: auto;
+				opacity: 1;
+			}
+			.go-to-page:checked ~ label{
+				width: 0;
+				opacity: 0;
+			}
+			.go-to-page:checked ~ .form  input{
+				width: 5rem;
+				opacity: 1;
+			}
+			.go-to-page{display: none;}
+
+			input{
+				width: 0px;
+				padding: 0.4125rem;
+				border-radius: 1.425rem;
+				opacity: 0;
+			}
+			button{
+				padding: 0 0.3125rem;
+				width: 3.125rem;
+				display: inline-block;
+			}
+			.close{
+				opacity: 0;
+				width: 0;
+				transition: all .5s;
+			}
+		}
+		
+	}
+	.page-numbers {
+		@include respond(phone){
+			text-align: center;
+		}
+	}
+}

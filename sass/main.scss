@@ -1,62 +1,74 @@
+/**
+ * Theme Name: Sagani
+ * Author  Name: Eliasu Abraman
+ * Author URI : https://swimghana.com
+ * Text Domain: sagani
+ * Verison: 1.0.0
+ */
 
-@import "abstract/variables";
-@import "base/base";
-@import "abstract/mixins";
-@import "base/typography";
+@use "abstract" as *;
+@use "layout" as *;
 
-@import "base/utilities";
+@use "base/base" as *;
+@use "base/typography" as *;
 
-@import "components/social-icons";
-@import "components/navigation";
-@import "components/mega-menu";
-@import "components/nav-simple";
+@use "base" as *;
 
-@import "components/featured";
-@import "components/sliders/featured-grid-l-2s";
+@use "partials/social-icons" as *;
+@use "partials/navigation" as *;
+@use "partials/mega-menu" as *;
+@use "partials/nav-simple" as *;
+@use "partials" as *;
+
+@use "partials/featured" as *;
+@use "partials/sliders" as *;
 
 
-@import "components/read-more";
-@import "components/widget";
-@import "components/widgets/widget-tag-list";
-@import "components/widgets/widget-subscribe";
-@import "components/widgets/widget-instagram";
-@import "components/widget-footer";
-@import "components/widgets/widget-about-footer";
-@import "components/widgets/widget-recent";
-@import "components/widget-menu";
-@import "components/comments";
-@import "components/checkout";
+@use "partials/read-more" as *;
+@use "partials/sidebar" as *;
+@use "partials/widgets/widget-tag-list" as *;
+@use "partials/widgets/widget-subscribe" as *;
+@use "partials/widgets/widget-search" as *;
+@use "partials/widgets/widget-instagram" as *;
+@use "partials/widget-footer" as *;
+@use "partials/widgets/widget-about-footer" as *;
+@use "partials/widgets/widget-recent" as *;
+@use "partials/widget-menu" as *;
+@use "partials/comments" as *;
+@use "partials/checkout" as *;
 
-@import "components/listing";
-@import "components/articles/listing-img-left";
-@import "components/articles/listing-gallery";
-@import "components/articles/listing-slider";
-@import "components/articles/listing-blog-style";
-@import "components/articles/listing-grid";
-@import "components/articles/listing-product";
-@import "components/highlights/highlight";
-@import "components/cta";
+@use "partials/listing" as *;
+@use "partials/articles/listing-img-left" as *;
+@use "partials/articles/listing-gallery" as *;
+@use "partials/article" as *;
+@use "partials/articles/listing-slider" as *;
+@use "partials/articles/listing-blog-style" as *;
+@use "partials/articles/listing-grid" as *;
+@use "partials/articles/listing-product" as *;
+@use "partials/highlights/highlight" as *;
+@use "partials/cta" as *;
 
 //product
-@import "components/product/product-tabs";
-@import "components/product/shop";
-@import "components/product/sort-by-price";
-@import "components/product/product-cat";
-@import "pages/single-product";
+@use "partials/product/product-tabs" as *;
+//@use "partials/product/shop";
+@use "partials/product/sort-by-price" as *;
+@use "partials/product/product-cat" as *;
+@use "pages/single-product" as *;
+@use "components" as *;
 
-@import "components/pagination";
-@import "components/load-more";
-@import "components/search-overlay";
-@import "components/table";
-@import "components/articles/listing-gallery";
-@import "pages/single";
-@import "pages/shop";
-@import "pages/archive";
+@use "partials/pagination" as *;
+@use "partials/load-more" as *;
+@use "partials/search-overlay" as *;
+@use "partials/table" as *;
+//@use "partials/articles/listing-gallery";
+@use "pages/single" as *;
+@use "pages/shop" as *;
+@use "pages/archive" as *;
+@use "pages/page" as *;
 
-@import "layout/grid";
-@import "layout/header";
-@import "layout/header-simple";
-@import "layout/main";
-@import "layout/sidebar";
-@import "layout/footer";
-////////////////
+@use "layout/header" as *;
+@use "layout/header-simple" as *;
+@use "layout/main" as *;
+@use "layout/sidebar" as *;
+@use "layout/footer" as *;
+//m

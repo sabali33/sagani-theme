@@ -1,74 +1,158 @@
-.row {
-	max-width: 100%;
-	
-	@include clearfix;
-	
-	&:not(:last-child){
-		margin-bottom: $grid-horizontal;
+//.row {
+//	max-width: 100%;
+
+//	@include clearfix;
+//
+//	&:not(:last-child){
+//		margin-bottom: $grid-horizontal;
+//	}
+//
+//	[class^=col-sg]{
+//		float: left;
+//
+//		&:not(:last-child){
+//			margin-right: $grid-vertical;
+//
+//			@include respond(tab-land){
+//				margin-right: calc( #{$grid-vertical} - 1rem );
+//			}
+//		}
+//		@include respond(tab-port){
+//			width: 100% !important;
+//			margin-right: 0 !important;
+//		}
+//
+//	}
+//	.col-sg-1-of-2{
+//		width: calc( (100% - #{$grid-vertical}) / 2);
+//		@include respond(tab-land){
+//			width: calc( (100% - calc(#{$grid-vertical} - 1rem)) / 2);
+//		}
+//	}
+//	.col-sg-1-of-3{
+//		width: calc( (100% - (2 * #{$grid-vertical})) / 3);
+//
+//		@include respond(tab-land){
+//			width: calc( (100% - (2 * calc(#{$grid-vertical} - 1rem ))) / 3);
+//		}
+//	}
+//	.col-sg-2-of-3{
+//		width: calc( 2 * ((100% - #{$grid-vertical}) / 3));
+//
+//		@include respond(tab-land){
+//			width: calc( 2 * ((100% - calc(#{$grid-vertical} - 1rem )) / 3));
+//		}
+//	}
+//	.col-sg-1-of-4{
+//		width: calc( (100% - (3 * #{$grid-vertical})) / 4);
+//
+//		@include respond(tab-land){
+//			width: calc( (100% - (3 * calc(#{$grid-vertical} - 1rem))) / 4);
+//		}
+//	}
+//	.col-sg-2-of-4{
+//		width: calc( 2 * ((100% - (3 * #{$grid-vertical})) / 4) + #{$grid-vertical});
+//
+//		@include respond(tab-land){
+//			width: calc( 2 * ((100% - (3 * calc(#{$grid-vertical} - 1rem ))) / 4) + calc(#{$grid-vertical} - 1rem ));
+//		}
+//	}
+//	.col-sg-3-of-4{
+//		width: calc( 3 * ((100% - (3 * #{$grid-vertical})) / 4) + (2 * #{$grid-vertical}));
+//
+//		@include respond(tab-land){
+//			width: calc( 3 * ((100% - (3 * calc(#{$grid-vertical} - 1rem))) / 4) + (2 * calc(#{$grid-vertical} - 1rem )));
+//		}
+//	}
+//
+
+//}
+//.full-width {
+//	.col-sg-2-of-3{
+//		width: 100%;
+//	}
+//}
+
+
+@use "./breakpoints" as *;
+@use "../abstract/variables" as *;
+@use "sass:math";
+
+.site-width {
+	width: 100%;
+	max-width: 1250px;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+.sg-row {
+	display: flex;
+	flex-flow: row wrap;
+
+	& > * {
+		box-sizing: border-box;
+		flex-grow: 0;
 	}
+}
 
-	[class^=col-sg]{
-		float: left;
+@include xs {
+	@for $col from 1 through $grid-cloumns {
+		.sg-col-#{$col}-xs {
+			width: math.div($col * 100%, $grid-cloumns);
+		}
+	}
+}
+@include sm {
+	@for $col from 1 through $grid-cloumns {
+		.sg-col-#{$col}-sm {
+			width: math.div($col * 100%, $grid-cloumns);
+		}
+	}
+}
+@include md {
+	@for $col from 1 through $grid-cloumns {
+		.sg-col-#{$col}-md {
+			width: math.div($col * 100%, $grid-cloumns);
+		}
+	}
+}
+@include lg {
+	@for $col from 1 through $grid-cloumns {
+		.sg-col-#{$col}-lg {
+			width: math.div($col * 100%, $grid-cloumns);
+		}
+	}
+}
 
-		&:not(:last-child){
-			margin-right: $grid-vertical;
-
-			@include respond(tab-land){
-				margin-right: calc( #{$grid-vertical} - 1rem );
+@include xl {
+	@for $col from 1 through $grid-cloumns {
+		.sg-col-#{$col }-xl {
+			width: math.div($col * 100%, $grid-cloumns);
+		}
+	}
+}
+@include lg {
+	@each $key, $val in $grid-gaps {
+		.sg-grid-gap-#{$key}-lg {
+			& > * {
+				padding: $val;
 			}
 		}
-		@include respond(tab-port){
-			width: 100% !important;
-			margin-right: 0 !important;
-		}
-
-	}  
-	.col-sg-1-of-2{
-		width: calc( (100% - #{$grid-vertical}) / 2);
-		@include respond(tab-land){
-			width: calc( (100% - calc(#{$grid-vertical} - 1rem)) / 2);
+		.sg-grid-gap-#{$key}-lg {
+			margin-left: -$val;
+			margin-right: -$val;
 		}
 	}
-	.col-sg-1-of-3{
-		width: calc( (100% - (2 * #{$grid-vertical})) / 3);
-
-		@include respond(tab-land){
-			width: calc( (100% - (2 * calc(#{$grid-vertical} - 1rem ))) / 3);
-		}
-	}
-	.col-sg-2-of-3{
-		width: calc( 2 * ((100% - #{$grid-vertical}) / 3));
-		
-		@include respond(tab-land){
-			width: calc( 2 * ((100% - calc(#{$grid-vertical} - 1rem )) / 3));
-		}
-	}
-	.col-sg-1-of-4{
-		width: calc( (100% - (3 * #{$grid-vertical})) / 4);
-
-		@include respond(tab-land){
-			width: calc( (100% - (3 * calc(#{$grid-vertical} - 1rem))) / 4);
-		}
-	}
-	.col-sg-2-of-4{
-		width: calc( 2 * ((100% - (3 * #{$grid-vertical})) / 4) + #{$grid-vertical});
-
-		@include respond(tab-land){
-			width: calc( 2 * ((100% - (3 * calc(#{$grid-vertical} - 1rem ))) / 4) + calc(#{$grid-vertical} - 1rem ));
-		}
-	}
-	.col-sg-3-of-4{
-		width: calc( 3 * ((100% - (3 * #{$grid-vertical})) / 4) + (2 * #{$grid-vertical}));
-
-		@include respond(tab-land){
-			width: calc( 3 * ((100% - (3 * calc(#{$grid-vertical} - 1rem))) / 4) + (2 * calc(#{$grid-vertical} - 1rem )));
-		}
-	}
-
-
 }
-.full-width {
-	.col-sg-2-of-3{
-		width: 100%;
+@include md {
+	@each $key, $val in $grid-gaps {
+		.sg-grid-gap-#{$key}-md {
+			& > * {
+				padding: $val;
+			}
+		}
+		.sg-grid-gap-#{$key}-md {
+			margin-left: -$val;
+			margin-right: -$val;
+		}
 	}
 }

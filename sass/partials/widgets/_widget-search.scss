@@ -1,0 +1,27 @@
+@use "../../layout/breakpoints" as *;
+.widget_search{
+
+  form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .wp-block-search__inside-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include sm{
+      flex-direction: row;
+      gap: 20px;
+
+      input{
+        width: 80%;
+      }
+    }
+  }
+  label{
+    display: none;
+  }
+
+}

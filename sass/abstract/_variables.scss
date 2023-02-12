@@ -2,17 +2,23 @@
 Header
  */
 
-$top-bar-list-margin: 0.6rem;
-$top-bar-list-font-color: #ababab;
+//$top-bar-list-margin: 0.6rem;
+//$top-bar-list-font-color: #ababab;
 
 /*
 General
  */
 $border-bottom-color: #eeeeee;
 $background-color:  #f9f9f9;
+$gray-900: #202020;
+$gray-800: #181818;
+$gray-300: #4a4a4a;
+$gray-100: #F9F9F9;
 $primary-body-color: #2f2f2f;
+$post-listing-title-color: #4A4A4A;
 $contrast-color: #16B9D6;
-
+$contrast-color-2: #11AECA;
+$subscribe-button-color: #125966;
 $contrast-color-dark: #00b0cd;
 $color-white: #ffffff;
 $color-black: #000000;
@@ -21,8 +27,9 @@ $twitter-color: #0099ff;
 $instagram-color: #666699;
 $pinterest-color: #cc3333;
 $vk-color: #5A81B3;
+$color-danger: #F53E0C;
 
-$rating-color: rgb(227, 77, 40);
+$rating-color: #F53E0C;
 /*
 Site width
  */
@@ -33,4 +40,33 @@ $site-width: 75.125rem;
 Grid
  */
 $grid-horizontal: 3rem;
-$grid-vertical: 2rem
+$grid-vertical: 2rem;
+//
+/**
+* Fonts
+**/
+$main-font: "ubuntu";
+$font-var-1: "ubuntu-medium";
+$heading-fonts: "RomanCyrillicStd";
+
+$card_shadow: 0px 0px 27px rgba(#00000012, .5 );
+
+$breakpoints: (
+    "xs": 0,
+    "sm": 480px,
+    "md": 720px,
+    "lg": 960px,
+    "xl": 1200px,
+);
+$grid-cloumns: 12;
+
+$grid-gaps: (
+    0: 0,
+    2: 15px,
+    3: 25px,
+    4: 30px,
+    5: 35px,
+    6: 40px,
+);
+
+$max-padding: 20;

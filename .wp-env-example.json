@@ -1,0 +1,13 @@
+{
+  "themes": ["."],
+  "plugins": ["../plugins/woocommerce"],
+  "config": {
+    "WP_DEBUG_DISPLAY": true,
+    "WP_DEBUG": true,
+    "WP_TESTS_DOMAIN": "LOCALHOST URL",
+    "WP_SITEURL": "LOCALHOST URL",
+    "WP_HOME": "LOCALHOST URL"
+  },
+  "port": 3200,
+  "testsPort": 3201
+}

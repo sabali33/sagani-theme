@@ -1,0 +1,27 @@
+@use "../../abstract/variables" as *;
+@use "../../abstract/mixins" as *;
+
+.product-tabs{
+	padding: 2rem 0;
+	label{
+		display: inline-block;
+		margin-right: 2rem;
+		transition: all 0.3s;
+		padding: .2rem 1rem;
+	}
+	.content{
+		display: none;
+		padding: 1.5rem 0;
+	}
+	.tab-controller:checked + label{
+		border: solid 1px $contrast-color;
+		padding: .2rem 1rem;
+		border-radius: 1.3125rem;
+		color: $contrast-color;
+	}
+	#tab-1:checked ~ #content-1,
+	#tab-2:checked ~ #content-2,
+	#tab-3:checked ~ #content-3{
+		display: block;
+	}
+}

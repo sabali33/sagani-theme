@@ -1,37 +1,22 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
 .header{
 	background: #fff;
 	
 	&__top-bar{
 		border-bottom: solid thin $border-bottom-color;
 		padding: 2rem;
-		
-		&-left,
-		&-right{
-			display: inline-block;
-		}
-		&-left,{
-			width: 70%;
 
-			
-		}
-		
-		&-right{
-			width: 29%;
-		}
 		&-right li{
 			
 		}
 
 		& ul{
 			list-style: none;
-
-			li{
-				display: inline-block;
-
-				&:not(:last-child){
-					margin-right: 0.3125rem;
-				}
-			}
+			display: flex;
+			flex-wrap: wrap;
+			gap: 15px;
 
 		}
 	}
@@ -48,11 +33,6 @@
 				max-height: 90px;
 			}
 		}
-		.title{
-			width: 32%;
-		}
-		
-
 	}
 
 

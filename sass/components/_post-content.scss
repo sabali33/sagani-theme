@@ -1,0 +1,10 @@
+.post-content {
+
+  p:first-child::first-letter{
+    font-size: 3.75rem;
+    float: left;
+    margin-top: -1.4rem;
+    padding-right: 0.5rem;
+    margin-left: -0.25rem;
+  }
+}

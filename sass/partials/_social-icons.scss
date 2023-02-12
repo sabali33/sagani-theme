@@ -1,0 +1,74 @@
+@use "../abstract/variables" as *;
+@use "../layout/breakpoints" as *;
+
+.social-icons{
+	gap: 20px;
+	flex-wrap: nowrap;
+	display: flex;
+	align-items: center;
+	flex-grow: 0;
+
+
+	.header-inner & {
+		display: none;
+
+		@include lg{
+			display: flex;
+		}
+	}
+
+	li{
+		overflow-x: hidden;
+
+		&:hover{
+			overflow-x: visible;
+		}
+	}
+
+	a{
+
+		&:link,
+		&:visited{
+			color: darken($primary-body-color, 30);
+		}
+
+		&:hover{
+			color: $contrast-color;
+		}
+
+		&:hover + .social-icons__icon-hidden{
+			display: inline-block;
+		}
+
+	}
+	
+	li{
+		position: relative;
+	}
+
+	.header-alt &{
+		justify-content: flex-end;
+	}
+	
+	/* & .fa {
+
+		&-facebook::before{
+			content: "\f39e";
+			font-family: fontAwesome;
+			display: inline-block;
+		}
+
+		&-twitter::before{
+			content: "\f39e";
+			font-family: fontAwesome;
+			display: inline-block;
+		}
+	} */
+	&__icon-hidden{
+		display: none;
+		position: absolute;
+		z-index: 1;
+		top: -1rem;
+	}
+
+}

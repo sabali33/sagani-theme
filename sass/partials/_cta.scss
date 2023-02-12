@@ -1,0 +1,17 @@
+@use "../abstract/mixins" as *;
+
+.cta{
+	.grid-post{
+		
+		@include respond(tab-port){
+			margin-bottom: 2rem;
+		}	
+			
+	}
+	& > div:last-child .grid-post{
+		margin-bottom: 0;
+	}
+	img{
+		object-fit: cover;
+	}
+}

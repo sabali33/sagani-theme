@@ -1,0 +1,53 @@
+@use "../../abstract/variables" as *;
+@use "../../abstract/mixins" as *;
+@use "../../layout/breakpoints" as *;
+
+.blog-style{
+
+	&.listing{
+		& > .post-excerpt{
+			font-size: 1rem;
+			padding: 1rem;
+
+			@include sm{
+				padding: 1.5rem;
+			}
+
+			@include lg{
+				padding: 2rem;
+			}
+
+		}
+	}
+	.share-counter{
+		position: unset;
+		width: 100%;
+		margin-top: 2rem;
+		border-bottom: solid 1px #eee;
+
+		@include respond(phone){
+			width: 167%;
+			margin-left: -67%;
+		}
+	}
+	.post-meta{
+		margin: 0;
+
+		.post-cat{
+			display: inline-block;
+			width: auto;
+
+			a{
+				vertical-align: middle;
+			}
+		}
+
+		.posted-by{
+			@include respond(phone){
+				margin-left: 0 !important;
+			}
+		}
+
+	}
+	
+}

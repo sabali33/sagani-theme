@@ -1,0 +1,76 @@
+@use "../layout/breakpoints" as *;
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
+.mobile-menu-wrap.canvas{
+  position: fixed;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  background-color: rgba($gray-100, 0.99);
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  transition: opacity 0.5s ease-out, background-color 1s ease-in-out;
+  @include component-shadow;
+
+  @include md{
+    display: none;
+    background-color: rgba($contrast-color, 0.99);
+  }
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+  }
+  .mobile-hamburger{
+    position: absolute;
+    right: 0;
+    padding: 0.7rem 1rem;
+    @include component-shadow;
+    color: $color-danger;
+  }
+  ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+  }
+  .menu-main-nav-container{
+    padding: 2rem;
+  }
+  .sub-menu-box{
+    display: none;
+    padding: 1rem;
+  }
+
+  .menu-item-has-children{
+
+    & > a{
+
+      & + i {
+        position: absolute;
+        right: 0;
+        top: 0.2rem;
+        padding: 0.5rem;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+  li{
+
+    &.active{
+
+      .sub-menu-box{
+        display: flex;
+      }
+
+      i{
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+}

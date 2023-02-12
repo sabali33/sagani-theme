@@ -1,11 +1,13 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
 .footer{
 	color: rgba($color-white, .6);
 	position: relative;
 	padding: 5rem 0;
 	width: 100%;
 	background: rgba( 0, 0, 0, .2);
-	
-	
+
 	&__background-box{
 		position: absolute;
 		width: 100%;
@@ -47,12 +49,22 @@
 
 	&__lower {
 	    padding: 2rem 0;
-	    border-top: solid thin gray;
 	    line-height: 2;
+		@include component-shadow;
 
 	    @include respond(tab-port){
 	    	text-align: center;
 	    }
+	}
+
+	&-logo{
+
+		img{
+			width: 50%;
+		}
+	}
+	&-wrapper{
+		align-items: center;
 	}
 
 	@include respond(tab-port){

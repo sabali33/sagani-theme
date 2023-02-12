@@ -1,0 +1,81 @@
+@use "../abstract/variables" as *;
+@use "../abstract/mixins" as *;
+
+.comments{
+	margin-top: 1rem;
+
+	.comment{
+		border-top: 1px solid #eee;
+		padding: 2rem 0;
+		color: rgba($color-black, .5);
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 20px;
+
+		.content {
+			width: 70%;
+
+			@include respond(phone){
+				width: 100%;
+			}
+			.reply-link{
+				float: right;
+
+				a{
+					color: $contrast-color;
+				}
+			}
+			.commenter{
+				color: $color-black;
+			}
+			.text{
+				margin-top: 1rem;
+			}
+			time{
+				font-size: 0.7rem;
+			}
+		}
+		.commenter-avatar{
+			width: 30%;
+			height: 30%;
+
+			img{
+				border-radius: 50%;
+				width: 80%;
+				object-fit: cover;
+
+				@include respond('phone'){
+					height: 100%;
+					width: 100%;
+				}
+			}
+
+		}
+		
+	}
+	.children{
+		padding-top: 2rem;
+		
+		.comment{
+			margin-left: 1.5rem;
+			padding-bottom: 0;
+		}
+	}
+	.form-fields{
+		@include comment-fields;
+	}
+}
+.comment-respond {
+
+	.comment-form{
+		@include comment-fields;
+	}
+	#cancel-comment-reply-link{
+		color: red;
+	}
+	.reply-head{
+		font-size: 16px;
+		margin-right: 2rem;
+		color: var(--gray-600);
+	}
+}

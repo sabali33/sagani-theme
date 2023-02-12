@@ -1,0 +1,35 @@
+@use "../../abstract/variables" as *;
+@use "../../abstract/mixins" as *;
+
+.list-video{
+	.slider-item:not(:first-child){
+		//display: none;
+	}
+	.post-slider{
+		position: relative;
+	}
+	img{
+		vertical-align: middle;
+	}
+	.slick-list {
+		position: relative;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		margin-top: 0px;
+		padding-top: 0px;
+		display: block;
+		height: inherit;
+	}
+	.slick-track {
+		perspective: 2000px;
+		position: relative;
+		margin-top: 0px;
+		padding-top: 0px;
+		display: block;
+		-webkit-backface-visibility: hidden;
+		transform: translate3d(0px, 0px, 0px);
+	}
+	.slick-slide{
+		overflow: hidden;
+	}
+}

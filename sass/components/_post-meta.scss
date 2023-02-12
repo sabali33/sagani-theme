@@ -1,0 +1,48 @@
+@use "../layout/breakpoints" as *;
+@use "../abstract/variables" as *;
+
+.post-meta{
+  font-size: 12px;
+  letter-spacing: 0.84px;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  gap: 2rem;
+  flex-wrap: wrap;
+  color: $gray-300;
+
+  a{
+    color: $gray-300;
+  }
+  .grid-post & {
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+
+    @include sm{
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  .highlight .post-list & {
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: start;
+    font-size: 18px;
+  }
+  .listing-classic-left &{
+    gap: 0.5rem;
+
+    @include lg{
+      gap: 15px;
+    }
+  }
+  .main-slider &{
+    color: $color-white;
+
+    a{
+      color: $color-white;
+    }
+  }
+
+}
